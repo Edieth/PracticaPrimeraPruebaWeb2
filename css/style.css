@@ -1,0 +1,148 @@
+/*Formato de la barra de navegación */
+.navbar{
+    display: flex;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    background-color: #87CEEB;
+}
+.nav-item {
+    display: flex;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+}
+
+/*Formato para las tarjetas de presentación de los pokémons */
+.card {
+    display: grid;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#pokemon-cards-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+}
+
+#pokemon-detail-container .detail-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pokemon-detail-container .detail-info img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#pokemon-detail-container .detail-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+#pokemon-detail-container .detail-info strong {
+    color: #e74c3c;
+}
+
+img { 
+    display: grid;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+}
+h4{
+    font-size: medium;
+    font-weight: bold;
+}
+/* Formatos para botones de paginación */
+.pagination-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    background-color:  #87CEEB;
+    color:black;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.pagination-controls button:hover {
+    background-color:blue;
+}
+
+.pagination-controls button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* Estilos media query responsivos para dispositivos móviles */
+/* Pequeñas pantallas de celulares */
+@media (max-width: 576px) {
+  .pk-name {
+    font-size: 1.2rem;
+  }
+
+  .pk-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Pantallas medianas de tabletas */
+@media (min-width: 577px) and (max-width: 992px) {
+  .pk-name {
+    font-size: 1.4rem;
+  }
+
+  .pk-img {
+    max-width: 80%;
+  }
+
+  .card-body p {
+    font-size: 1rem;
+  }
+}
+
+/* Pantallas grandes de escritorio */
+@media (min-width: 993px) {
+  .pk-name {
+    font-size: 1.6rem;
+  }
+
+  .pk-img {
+    max-width: 60%;
+  }
+
+  .card-body p {
+    font-size: 1.1rem;
+  }
+}
+
