@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Entrenador</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+  <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><img class="imagPoke" src="img/pokemon-logo-png-1421.png" alt="Logo Pokémon" class="d-inline-block align-text-top img-fluid"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><a class="navbar-brand" href="index.html">
+    </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="entrenador.html">Entrenadores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="agregarEntrenad.html">Agregar Entrenador</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="equiposPoke.html">Equipos Pokémon</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="agregarEquipo.html">Agregar Equipo</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>  
+    <div class="container mt-4 trainer">
+        <h1>Agregar Entrenador</h1>
+        <form id="formEntrenador">
+            <div class="mb-3">
+                <label class="form-label">Nombre y apellidos</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sexo</label>
+                <select id="sexo" class="form-control" required>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Lugar de residencia</label>
+                <input type="text" class="form-control" id="residencia" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">URL de la foto</label>
+                <input type="url" class="form-control" id="foto" required>
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+    </div>
+
+    <script src="js/db.js"></script>
+    <script src="js/entrenadoresEquipos.js"></script>
+    <script>
+        document.getElementById("formEntrenador").addEventListener("submit", guardarEntrenador);
+    </script>
+</body>
+</html>

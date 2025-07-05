@@ -7,10 +7,15 @@
     background-color: #87CEEB;
 }
 .nav-item {
-    display: flex;
+    display: grid;
     left: 0;
     right: 0;
+    margin: 1rem, 1rem, 1rem, 1rem;
     justify-content: space-around;
+    align-items: center;
+}
+.nav-link{
+  font-weight: bold;
 }
 
 /*Formato para las tarjetas de presentación de los pokémons */
@@ -61,10 +66,11 @@ img {
     height: auto;
     align-items: center;
 }
-h4{
-    font-size: medium;
-    font-weight: bold;
+.imagPoke {
+    max-width: 120px;
+    height: auto;
 }
+
 /* Formatos para botones de paginación */
 .pagination-controls {
     text-align: center;
@@ -99,12 +105,13 @@ button:disabled {
 /* Pequeñas pantallas de celulares */
 @media (max-width: 576px) {
   .pk-name {
-    font-size: 1.2rem;
+    font-size: 0.5rem;
   }
 
   .pk-img {
     max-width: 100%;
     height: auto;
+    font-weight: bold;
   }
 
   .card {
@@ -114,12 +121,25 @@ button:disabled {
   .card-body p {
     font-size: 0.9rem;
   }
+  .form-control {
+    width: 90% !important;
+    font-size: 0.9rem;
+  }
+
+  .trainer,
+  .container {
+    width: 95% !important;
+    height: auto;
+    padding: 1rem;
+  }
 }
+
 
 /* Pantallas medianas de tabletas */
 @media (min-width: 577px) and (max-width: 992px) {
   .pk-name {
-    font-size: 1.4rem;
+    font-size: 1rem;
+    font-weight: bold;
   }
 
   .pk-img {
@@ -129,12 +149,24 @@ button:disabled {
   .card-body p {
     font-size: 1rem;
   }
+    .form-control {
+    width: 80% !important;
+    font-size: 1rem;
+  }
+
+  .trainer,
+  .container {
+    width: 85% !important;
+    height: auto;
+    padding: 1.5rem;
+  }
 }
 
 /* Pantallas grandes de escritorio */
 @media (min-width: 993px) {
   .pk-name {
     font-size: 1.6rem;
+    font-weight: bold;
   }
 
   .pk-img {
@@ -146,3 +178,47 @@ button:disabled {
   }
 }
 
+/* Formato para el formulario de agregar entrenador (agregarEntrenad.html) */
+.trainer {
+    background-color:#f3f2a5;
+    width: 42rem;
+    height: 30rem;
+    
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 40rem;
+    
+}
+.trainer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+/* Formato para el formulario de agregar Equipos (agregarEquipo.html) */
+.container{
+  background-color: #faeb99;
+opacity: 0.8;
+width: 44%;
+}
+.form-label{
+  font-weight: bold;
+  color: #333;
+}
+.formularioEquipo button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
